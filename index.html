@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th> 
+                    <th>description</th>
+                    <th>price</th>
+                    <th>image</th>
+                </tr>
+            </thead>
+            <tbody Id="prodtbl"></tbody>
+        </table>
+        
+        <script>
+            var arry = [
+                {
+                    id: 1,
+                    description: "desription1",
+                    price: 100,
+                    image:"prod1.jpg"
+                },
+                {
+                    id: 2,
+                    description: "desription2",
+                    price: 200,
+                    image:"prod2.jpg"
+                }
+            ];
+            function product(){
+                var table_row ="";
+                for (var i = 0; i < arry.length; i++){
+                   table_row +="<tr>";
+                   table_row +="<td>"+ arry[i].id+"</td>";
+                   table_row +="<td>"+ arry[i].description+"</td>";
+                   table_row +="<td>"+ arry[i].price+"</td>";
+                   table_row +="<td>"+ arry[i].image+"</td>";
+                    
+                }
+                document.getElementById("prodtbl").innerHTML= table_row;
+            }
+                window.onload=product();
+        </script>
+    </body>
+</html>
